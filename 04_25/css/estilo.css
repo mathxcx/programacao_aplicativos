@@ -1,0 +1,54 @@
+.alinhado{
+   width: 500px;
+   text-align: justify;
+}
+
+.linhacima{
+    text-decoration: overline;
+}
+
+.linhameio{
+    text-decoration: line-through;
+}
+
+.linhabaixo{
+    text-decoration: underline;
+}
+
+.linhacima_baixo{
+    text-decoration: overline underline;
+}
+
+.maiusculo{
+    text-transform: uppercase;
+}
+
+.minusculo{
+    text-transform: lowercase;
+}
+
+.palavras_espacadas{
+    word-spacing: 10px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.outrafonte{
+    font-family: "Jacquard 12 Charted", system-ui;
+
+}
+
+.italico{
+    font-style: italic;
+    /* Negrito */
+    font-weight: normal;
+    /* font-wight trabalha com a espressura da fonte notmal, lighter, bold entre outras */
+    color: pink;
+}
+
+.cor{
+    color:crimson;
+    font-size: 780px; 
+}
