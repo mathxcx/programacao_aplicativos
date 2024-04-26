@@ -1,0 +1,84 @@
+.linha{
+    background-color: azure;
+}
+
+.linha li{
+    /* Mostrando uma linha na horizontal */
+    display: inline;
+}
+
+.linha ul{
+    padding: 0;
+}
+
+#menu{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+.bloqueado{
+    display: block;
+}
+
+.imagem{
+    width: 500px;
+    height: 250px;
+}
+
+.imagem img{
+    /* Max width e height forcam o elemento a ter um tamanaho
+    maximo do elemento que esta contido */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fixo{
+    border: 8px solid cornflowerblue ;
+    background-color: azure;
+    color: black;
+    /* position fixed usa como referencia a tela toda */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.conteudo{
+    width: 500px;
+    height: 800px;
+    background-color: azure;
+    border: 4px solid cornflowerblue;
+    position: relative;
+}
+
+.texto{
+    /* position absolute usa como referencia o elemento que esta contido */
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+
+}
+
+.anuncio{
+    position: relative;
+    width: 800px;
+    font-size: 80px;
+    font-weight: bold;
+    color:yellow;
+}
+
+.anuncio img{
+    max-width: 100%;
+    opacity: 0.7;
+    
+}
+
+/* Colocando conteudo no centro da div */
+.anuncio div{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
