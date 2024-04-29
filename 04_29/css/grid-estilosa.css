@@ -1,0 +1,21 @@
+.container{
+    background-color: rgb(255, 255, 255);
+     width: 75vw; /*vh viewport width, viewport é a página que está sendo exibida */
+    height: 100vh; /*vh viewport vertical, viewport é a página que está sendo exibida */
+    margin: 0 auto;
+}
+
+.grid-container{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    background-color: darkmagenta;
+    padding: 10px;
+}
+
+.grid-item{
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 30px;
+    text-align: center;
+}
