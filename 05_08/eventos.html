@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script>
+        function mensagem(){
+            alert("Atenção")
+        }
+
+        function ceu(){
+            alert("Ceu Azul")
+            document.getElementById("ceu").innerHTML = "Ceu nublado"
+            document.getElementById("ceu").className = "nublado"
+               }
+
+        function ceulimpo(){
+            document.getElementById("ceu").innerHTML= "Ceu azul"
+            document.getElementById("ceu").className = "ceulimpo"
+        }
+
+        function verde(){
+            document.getElementById("cores").className = "verde"
+        }
+
+        function vermelho(){
+            document.getElementById("cores").className = "vermelho"
+        }
+
+        function amarelo(){
+            document.getElementById("cores").className = "amarelo"
+        }
+
+    </script>
+</head>
+<!-- onload é chamado ao carregar o body -->
+<body onload="amarelo()">
+    <div class="container">
+        <!-- Botão -->
+        <!-- O evento onclick espera um click para ser acionado -->
+        <button id="alerta" onclick="mensagem()">Clique aqui</button> 
+        
+        <div id="ceu">Ceu Azul</div>
+        <!-- O evento onblur espera ser removido o foco do elemento -->
+        <input type="text" onblur="ceu()" onfocus="ceulimpo()">
+        <!-- onmouseover é quando o mouse esta está em cima do elemento -->
+        <!-- onmouseout é quando o mouse sai do elemento -->
+        <div id="cores" onmouseover="verde()" onmouseout="vermelho()" >
+            <h1>Cores</h1>
+
+        </div>
+    </div>
+</body>
+</html>
