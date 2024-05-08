@@ -29,5 +29,5 @@ console.log(soma)
 
 let dia = "Segunda"
 let saudacao = "Boa Tarde"
-console.log(dia+saudacao)
+console.log(dia+saudacao) //Concatenando duas string
 
