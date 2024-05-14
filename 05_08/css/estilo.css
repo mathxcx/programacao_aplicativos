@@ -1,38 +1,61 @@
-#alerta{
+#alerta {
     background-color: red;
     color: white;
     font-size: 50px;
     border-radius: 20px;
 }
 
-.ceulimpo{
+.ceulimpo {
     background-color: dodgerblue;
     font-size: 20px;
     color: antiquewhite;
 }
 
-.nublado{
+.nublado {
     background-color: darkblue;
     color: whitesmoke;
 }
 
-#cores{
+#cores {
     height: 300px;
     width: 200px;
 }
 
-.verde{
+.verde {
     background-color: green;
 }
 
-.vermelho{
+.vermelho {
     background-color: crimson;
 }
 
-.amarelo{
+.amarelo {
     background-color: darkgoldenrod;
 }
 
-#listaCarros, th, td{
+#listaCarros,
+th,
+td {
     border: 1px solid black;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#titulo {
+    text-align: center;
+}
+
+tr th{
+    background-color: gray;
+}
+
+tr:nth-last-child(even){
+    background-color: antiquewhite;
+}
+
+button{
+    background-color: darkblue;
+    color: whitesmoke;
 }
