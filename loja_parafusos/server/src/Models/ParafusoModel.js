@@ -1,20 +1,29 @@
+import mysql from "mysql2";
 import config from "../Config.js";
 
 class ParafusoModel{
     constructor(){
-        this.parafusos = [
-            {nome: "estrela"},
-            {nome:"frânces"},
-            {nome:"máquina"}
-        ]
+        this.conexao = mysql.createConnection(config.db);
     }
 
     create(nome){
-        let parafuso = {
-            nome:nome
-        }
+        let sql = `insert into parafusos (nome) values("${nome}");`;
 
-        this.parafusos.push(parafuso)
+        return new Promise((resolve,reject)=>{
+
+            this.conexao.query(sql,(erro,retorno)=>{
+                if(erro){
+                    reject([400,erro])
+                
+                }
+
+                resolve([201,"Parafuso Adicionado"])
+            })
+
+
+        });
+
+
     }
     
     read(){

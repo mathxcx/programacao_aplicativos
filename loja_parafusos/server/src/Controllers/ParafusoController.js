@@ -10,15 +10,40 @@ class ParafusoController{
     }
     create(req,res){
         const nome = req.body.nome;
-        ParafusoModel.create(nome)
-        res.status(201).json("Parafuso Criado");
+        ParafusoModel.create(nome).then(
+            resposta =>{
+                console.debug("Inserindo um Parafuso");
+                res.status(resposta[0]).json(resposta[1])
+            }
+        ).catch(
+            resposta =>{
+                console.debug("Erro: Inserindo um Parafuso");
+                res.status(resposta[0]).json(resposta[1])
+
+            }    
+        )
+
     }
 
 
     read(req,res){
-        
-        res.status(200).json(ParafusoModel.read());
+
+        const nome = req.body.nome;
+        ParafusoModel.create(nome).then(
+            resposta =>{
+                console.debug("Inserindo um Parafuso");
+                res.status(resposta[0]).json(resposta[1])
+            }
+        ).catch(
+            resposta =>{
+                console.debug("Erro: Inserindo um Parafuso");
+                res.status(resposta[0]).json(resposta[1])
+
+            }    
+        )
+
     }
+
 
     update(req,res){
         const index = req.params.index;
