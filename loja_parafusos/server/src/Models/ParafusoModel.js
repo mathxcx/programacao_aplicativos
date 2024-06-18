@@ -27,20 +27,58 @@ class ParafusoModel{
     }
     
     read(){
-        return this.parafusos;
+        let sql = `select * from parafusos;`
+
+        return new Promise((resolve,reject)=>{
+            this.conexao.query(sql,(erro,retorno)=>{
+                if(erro){
+                    reject([400,erro])
+                }
+                resolve([200,retorno])
+
+
+            })
+        });
+    
     }
 
-    update(index,nome){
-        let parafuso = {
-            nome:nome
-        }
+    update(id_parafuso,nome){
+        let sql = `update parafusos set nome="${nome}" where id_parafuso="${id_parafuso}"`
 
-        this.parafusos[index] = parafuso;
+        return new Promise((resolve,reject)=>{
+            this.conexao.query(sql,(erro,retorno)=>{
+                if(erro){
+                    reject([400,erro])
+                }else if(retorno.affectedRows>0){
+                    resolve([200,"Parafuso Atualizado"])
+                }else{
+                    resolve([404, "Parafuso não encontrado!"])
+            }
 
-    }
+            })
 
-    delete(index){
-        this.parafusos.splice(index, 1);
+    });
+        
+ }
+
+    delete(id_parafuso){
+        let sql = `delete from parafusos where id_parafuso="${id_parafuso}"`
+
+        return new Promise((resolve,reject)=>{
+            this.conexao.query(sql,(erro,retorno)=>{
+                if(erro){
+                    reject([400,erro])
+                }else if(retorno.affectedRows>0){
+                    resolve([200,"Parafuso Deletado"])
+                }else{
+                    resolve([404, "Parafuso não deletado!"])
+            }
+
+            })
+
+    });
+        
+
     }
 }
 
