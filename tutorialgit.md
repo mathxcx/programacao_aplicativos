@@ -27,3 +27,24 @@ git commit -m "O que foi realizado"
 //Subindo alterações
 
 git push -u origin main
+
+
+
+
+/// IMSONIA
+
+CREATE - json
+
+http://localhost:5000/parafusos
+
+READ 
+
+http://localhost:5000/parafusos
+
+UPDATE - json
+
+http://localhost:5000/parafusos/0
+
+DELETE - json 
+
+http://localhost:5000/parafusos/3 => número 3 quer dizer qual id vc quer apagar

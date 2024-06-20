@@ -28,3 +28,17 @@ update parafusos set nome= "fenda" where id_parafuso = 1;
 
 -- DELETE é delete-- 
 delete from parafusos where id_parafuso=1;
+
+
+
+
+//PRA USAR NO TERMINAL 
+
+cd loja_parafusos (nome da pasta)
+
+cd server (pra entrar no server)
+
+npx nodemon src/App.js
+
+
+XAMP TEM QUE ESTAR ABERTO NO MYSQL LIGADO
